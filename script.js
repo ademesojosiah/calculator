@@ -37,7 +37,9 @@ multiply.addEventListener("click",()=>{addNum("*")});
 ac.addEventListener("click",()=>{input.value = ""});
 modulus.addEventListener("click",()=>{addNum("%")});
 divide.addEventListener("click",()=>{addNum("/")});
-// equal.addEventListener("click",()=>{addNum()});
+equal.addEventListener("click",()=>{
+    input.value = eval(input.value);
+});
 plus.addEventListener("click",()=>{addNum("+")});
 del.addEventListener("click",()=>{ 
     let arr = input.value.split("");
