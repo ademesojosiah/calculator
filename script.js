@@ -17,10 +17,16 @@ const seven = document.querySelector("#seven");
 const eight = document.querySelector("#eight");
 const nine = document.querySelector("#nine");
 const zero = document.querySelector("#zero");
-const input = document.querySelector("#input");
+const input = document.querySelector("#input1");
+const input2 = document.querySelector("#input2");
+
 
 function addNum(num) {
     input.value += `${num}`;
+}
+
+function upInput(){
+    input2.value = input.value
 }
  
 one.addEventListener("click",()=>{addNum(1)})
@@ -33,21 +39,54 @@ seven.addEventListener("click",()=>{addNum(7)});
 eight.addEventListener("click",()=>{addNum(8)});
 nine.addEventListener("click",()=>{addNum(9)});
 zero.addEventListener("click",()=>{addNum(0)});
-multiply.addEventListener("click",()=>{addNum("*")});
-ac.addEventListener("click",()=>{input.value = ""});
-modulus.addEventListener("click",()=>{addNum("%")});
-divide.addEventListener("click",()=>{addNum("/")});
-equal.addEventListener("click",()=>{
-    input.value = eval(input.value);
+multiply.addEventListener("click",()=>{
+    addNum("*")
+    input2.value += input.value
+    input.value =""
 });
-plus.addEventListener("click",()=>{addNum("+")});
+ac.addEventListener("click",()=>{input.value = "";
+input2.value =""});
+modulus.addEventListener("click",()=>{
+    addNum("%")
+    input2.value += input.value
+    input.value =""
+});
+divide.addEventListener("click",()=>{
+    addNum("/")
+    input2.value += input.value
+    input.value =""
+});
+equal.addEventListener("click",()=>{
+    input2.value += input.value
+    input.value = eval(input2.value,input.value);
+    
+    
+});
+plus.addEventListener("click",()=>{
+    addNum("+")
+    input2.value += input.value
+    input.value =""
+});
 del.addEventListener("click",()=>{ 
     let arr = input.value.split("");
     arr.pop()
     input.value = arr.join("")
+    if(input.value == ""){
+        let arr = input2.value.split("");
+        arr.pop()
+        input2.value = arr.join("")
+    }
 });
-minus.addEventListener("click",()=>{addNum("-")});
-dot.addEventListener("click",()=>{addNum(".")});
+minus.addEventListener("click",()=>{
+    addNum("-")
+    input2.value += input.value
+    input.value =""
+});
+dot.addEventListener("click",()=>{
+    addNum(".")
+    input2.value += input.value
+    input.value =""
+});
 
 
 

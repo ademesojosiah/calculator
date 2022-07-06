@@ -32,21 +32,37 @@ body{
 
 .cal-display{
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 50px;
-    background: #463f3f;
+    height: 140px;
+    background: #272727;
 }
 
-.cal-display input{
+.cal-display #input1{
+    padding-right: 20px;
     text-align: right;
-    height: 50px;
+    height: 70px;
     width: 100%;
     font-size: 15px;
     background-color:#272727 ;
     color: #fff;
     outline: none;
+    border: none;
+}
+
+.cal-display #input2{
+    padding-right: 20px;
+    text-align: right;
+    height: 70px;
+    width: 100%;
+    font-size: 12px;
+    background-color:#272727 ;
+    color: rgba(255, 255, 255, 0.685);
+    outline: none;
+    border: none;
+
 }
 
 td{
