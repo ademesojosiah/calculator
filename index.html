@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styletb.css">
+    <script src="/script.js" defer></script>
     <title>calculator</title>
 </head>
 <body>
@@ -15,39 +16,39 @@
         </div>
         
         <div class="cal-background">
-        <div class="cal-display"></div>
+        <div class="cal-display" ><input type="text" name="" id="input"></div>
             <table>
                 <tr class="row-1">
-                    <td>AC</td>
-                    <td>%</td>
-                    <td>/</td>
-                    <td class="col-4">del</td>
+                    <td id="ac" >AC</td>
+                    <td id="modulus">%</td>
+                    <td id="divide">/</td>
+                    <td class="col-4" id="del">del</td>
                 </tr>
                 <tr>
-                    <td>7</td>
-                    <td>8</td>
-                    <td>9</td>
-                    <td class="col-4">*</td>
-                </tr>
-        
-                <tr>
-                    <td>4</td>
-                    <td>5</td>
-                    <td>6</td>
-                    <td class="col-4">-</td>
+                    <td id="seven">7</td>
+                    <td id="eight">8</td>
+                    <td id="nine">9</td>
+                    <td id="multiply" times="col-4">*</td>
                 </tr>
         
                 <tr>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td class="col-4">+</td>
+                    <td id="four">4</td>
+                    <td id="five">5</td>
+                    <td id="six">6</td>
+                    <td id="minus" class="col-4">-</td>
                 </tr>
         
                 <tr>
-                    <td colspan="2">0</td>
-                    <td>.</td>
-                    <td class="col-4">=</td>
+                    <td id="one">1</td>
+                    <td id="two">2</td>
+                    <td id="three">3</td>
+                    <td class="col-4" id="plus">+</td>
+                </tr>
+        
+                <tr>
+                    <td colspan="2" id="zero">0</td>
+                    <td id="dot">.</td>
+                    <td class="col-4" id="equal">=</td>
                 </tr>
         
         
