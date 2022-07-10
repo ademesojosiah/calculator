@@ -22,12 +22,19 @@ const input2 = document.querySelector("#input2");
 
 
 function addNum(num) {
+    if(input.value.length > 1 && input2.value.length > 1){
+        input2.value = ""
+        input.value =""
+    }
+
     input.value += `${num}`;
 }
 
-function upInput(){
-    input2.value = input.value
-}
+
+
+
+
+
  
 one.addEventListener("click",()=>{addNum(1)})
 two.addEventListener("click",()=>{addNum(2)})
@@ -59,7 +66,7 @@ divide.addEventListener("click",()=>{
 equal.addEventListener("click",()=>{
     input2.value += input.value
     input.value = eval(input2.value,input.value);
-    
+
     
 });
 plus.addEventListener("click",()=>{
